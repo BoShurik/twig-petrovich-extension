@@ -1,0 +1,30 @@
+--TEST--
+"inflect_last_name" filter
+--TEMPLATE--
+{{ 'Сашин' | inflect_last_name('nomenative', 'male') }}
+{{ 'Сашин' | inflect_last_name('genitive', 'male') }}
+{{ 'Сашин' | inflect_last_name('dative', 'male') }}
+{{ 'Сашин' | inflect_last_name('accusative', 'male') }}
+{{ 'Сашин' | inflect_last_name('instrumental', 'male') }}
+{{ 'Сашин' | inflect_last_name('prepositional', 'male') }}
+{{ 'Машина' | inflect_last_name('nomenative', 'female') }}
+{{ 'Машина' | inflect_last_name('genitive', 'female') }}
+{{ 'Машина' | inflect_last_name('dative', 'female') }}
+{{ 'Машина' | inflect_last_name('accusative', 'female') }}
+{{ 'Машина' | inflect_last_name('instrumental', 'female') }}
+{{ 'Машина' | inflect_last_name('prepositional', 'female') }}
+--DATA--
+return [];
+--EXPECT--
+Сашин
+Сашина
+Сашину
+Сашина
+Сашиным
+Сашине
+Машина
+Машиной
+Машиной
+Машину
+Машиной
+Машиной

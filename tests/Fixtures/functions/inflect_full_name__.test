@@ -1,0 +1,30 @@
+--TEST--
+"inflect_full_name_*_*" function
+--TEMPLATE--
+{{ inflect_full_name_nomenative_male('Александров Александр Александрович') }}
+{{ inflect_full_name_genitive_male('Александров Александр Александрович') }}
+{{ inflect_full_name_dative_male('Александров Александр Александрович') }}
+{{ inflect_full_name_accusative_male('Александров Александр Александрович') }}
+{{ inflect_full_name_instrumental_male('Александров Александр Александрович') }}
+{{ inflect_full_name_prepositional_male('Александров Александр Александрович') }}
+{{ inflect_full_name_nomenative_female('Машина Мария Александровна') }}
+{{ inflect_full_name_genitive_female('Машина Мария Александровна') }}
+{{ inflect_full_name_dative_female('Машина Мария Александровна') }}
+{{ inflect_full_name_accusative_female('Машина Мария Александровна') }}
+{{ inflect_full_name_instrumental_female('Машина Мария Александровна') }}
+{{ inflect_full_name_prepositional_female('Машина Мария Александровна') }}
+--DATA--
+return [];
+--EXPECT--
+Александров Александр Александрович
+Александрова Александра Александровича
+Александрову Александру Александровичу
+Александрова Александра Александровича
+Александровым Александром Александровичем
+Александрове Александре Александровиче
+Машина Мария Александровна
+Машиной Марии Александровны
+Машиной Марии Александровне
+Машину Марию Александровну
+Машиной Марией Александровной
+Машиной Марии Александровне

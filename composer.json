@@ -9,5 +9,44 @@
             "email": "boshurik@gmail.com"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "BoShurik\\Petrovich\\Twig\\Extension\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BoShurik\\Petrovich\\Twig\\Extension\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "twig/twig": "^2.10 | ^3.0",
+        "staticall/petrovich-php": "^1.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpunit/phpunit": "^8.5",
+        "vimeo/psalm": "^3.11"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:BoShurik/petrovich-php.git"
+        }
+    ],
+    "scripts": {
+        "test": "vendor/bin/phpunit --colors=always",
+        "coverage": "vendor/bin/phpunit --coverage-html build/coverage",
+        "cs-check": "vendor/bin/php-cs-fixer fix --allow-risky=yes --diff --ansi --dry-run",
+        "cs-fix": "vendor/bin/php-cs-fixer fix --allow-risky=yes --diff --ansi",
+        "psalm": "vendor/bin/psalm",
+        "checks": [
+            "@cs-check",
+            "@psalm",
+            "@test"
+        ]
+    }
 }

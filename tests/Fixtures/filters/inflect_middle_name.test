@@ -1,0 +1,54 @@
+--TEST--
+"inflect_middle_name" filter
+--TEMPLATE--
+{{ 'Александрович' | inflect_middle_name('nomenative', 'male') }}
+{{ 'Александрович' | inflect_middle_name('genitive', 'male') }}
+{{ 'Александрович' | inflect_middle_name('dative', 'male') }}
+{{ 'Александрович' | inflect_middle_name('accusative', 'male') }}
+{{ 'Александрович' | inflect_middle_name('instrumental', 'male') }}
+{{ 'Александрович' | inflect_middle_name('prepositional', 'male') }}
+{{ 'Александрович' | inflect_middle_name('nomenative') }}
+{{ 'Александрович' | inflect_middle_name('genitive') }}
+{{ 'Александрович' | inflect_middle_name('dative') }}
+{{ 'Александрович' | inflect_middle_name('accusative') }}
+{{ 'Александрович' | inflect_middle_name('instrumental') }}
+{{ 'Александрович' | inflect_middle_name('prepositional') }}
+{{ 'Александровна' | inflect_middle_name('nomenative', 'female') }}
+{{ 'Александровна' | inflect_middle_name('genitive', 'female') }}
+{{ 'Александровна' | inflect_middle_name('dative', 'female') }}
+{{ 'Александровна' | inflect_middle_name('accusative', 'female') }}
+{{ 'Александровна' | inflect_middle_name('instrumental', 'female') }}
+{{ 'Александровна' | inflect_middle_name('prepositional', 'female') }}
+{{ 'Александровна' | inflect_middle_name('nomenative') }}
+{{ 'Александровна' | inflect_middle_name('genitive') }}
+{{ 'Александровна' | inflect_middle_name('dative') }}
+{{ 'Александровна' | inflect_middle_name('accusative') }}
+{{ 'Александровна' | inflect_middle_name('instrumental') }}
+{{ 'Александровна' | inflect_middle_name('prepositional') }}
+--DATA--
+return [];
+--EXPECT--
+Александрович
+Александровича
+Александровичу
+Александровича
+Александровичем
+Александровиче
+Александрович
+Александровича
+Александровичу
+Александровича
+Александровичем
+Александровиче
+Александровна
+Александровны
+Александровне
+Александровну
+Александровной
+Александровне
+Александровна
+Александровны
+Александровне
+Александровну
+Александровной
+Александровне

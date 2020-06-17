@@ -1,0 +1,30 @@
+--TEST--
+"inflect_first_name_*_*" function
+--TEMPLATE--
+{{ inflect_first_name_nomenative_male('Саша') }}
+{{ inflect_first_name_genitive_male('Саша') }}
+{{ inflect_first_name_dative_male('Саша') }}
+{{ inflect_first_name_accusative_male('Саша') }}
+{{ inflect_first_name_instrumental_male('Саша') }}
+{{ inflect_first_name_prepositional_male('Саша') }}
+{{ inflect_first_name_nomenative_female('Маша') }}
+{{ inflect_first_name_genitive_female('Маша') }}
+{{ inflect_first_name_dative_female('Маша') }}
+{{ inflect_first_name_accusative_female('Маша') }}
+{{ inflect_first_name_instrumental_female('Маша') }}
+{{ inflect_first_name_prepositional_female('Маша') }}
+--DATA--
+return [];
+--EXPECT--
+Саша
+Саши
+Саше
+Сашу
+Сашей
+Саше
+Маша
+Маши
+Маше
+Машу
+Машей
+Маше
