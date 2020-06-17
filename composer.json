@@ -31,12 +31,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "git@github.com:BoShurik/petrovich-php.git"
-        }
-    ],
     "scripts": {
         "test": "vendor/bin/phpunit --colors=always",
         "coverage": "vendor/bin/phpunit --coverage-html build/coverage",
