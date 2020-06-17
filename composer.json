@@ -1,0 +1,13 @@
+{
+    "name": "boshurik/twig-petrovich-extension",
+    "description": "Twig Petrovich extension",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BoShurik",
+            "email": "boshurik@gmail.com"
+        }
+    ],
+    "require": {}
+}
