@@ -10,11 +10,11 @@ composer req boshurik/twig-petrovich-extension
 
 ```php
 use Staticall\Petrovich\Petrovich;
-use Staticall\Petrovich\Petrovich\Ruleset;
+use Staticall\Petrovich\Petrovich\Loader;
 use BoShurik\Petrovich\Twig\Extension\PetrovichExtension;
 use Twig\Environment;
 
-$petrovich = new Petrovich(new Ruleset('/path/to/rules.json'));
+$petrovich = new Petrovich(Loader::load('/path/to/rules.json'));
 $extension = new PetrovichExtension($petrovich);
 $twig = new Environment($loader);
 $twig->addExtension($extension);
@@ -23,11 +23,11 @@ $twig->addExtension($extension);
 You can use callable to lazy loading `Petrovich` instance
 ```php
 use Staticall\Petrovich\Petrovich;
-use Staticall\Petrovich\Petrovich\Ruleset;
+use Staticall\Petrovich\Petrovich\Loader;
 use BoShurik\Petrovich\Twig\Extension\PetrovichExtension;
 
 $factory = function () {
-    return new Petrovich(new Ruleset('/path/to/rules.json'));
+    return new Petrovich(Loader::load('/path/to/rules.json'));
 };
 $extension = new PetrovichExtension($factory);
 ```
